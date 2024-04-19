@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_orange_light"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:fontFamily="@font/aclonica"
+        android:text="Tic Tac Toe Game!"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/turn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:fontFamily="@font/aclonica"
+        android:text="Turn X"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.879" />
+
+
+    <TextView
+        android:id="@+id/Mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:fontFamily="@font/aclonica"
+        android:text="Mode PvP"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout style="@style/row">
+
+            <Button
+                android:id="@+id/a1"
+                style="@style/column"
+                android:contentDescription="a1"/>
+
+            <View style="@style/verticalLine" />
+
+            <Button
+                android:id="@+id/a2"
+                style="@style/column"
+                android:contentDescription="a2"/>
+
+            <View style="@style/verticalLine" />
+
+            <Button
+                android:id="@+id/a3"
+                style="@style/column"
+                android:contentDescription="a3"/>
+
+        </LinearLayout>
+
+        <View style="@style/horizontalLine" />
+
+        <LinearLayout style="@style/row">
+
+            <Button
+                android:id="@+id/b1"
+                style="@style/column"
+                android:contentDescription="b1"/>
+
+            <View style="@style/verticalLine" />
+
+            <Button
+                android:id="@+id/b2"
+                style="@style/column"
+                android:contentDescription="b2"/>
+
+            <View style="@style/verticalLine" />
+
+            <Button
+                android:id="@+id/b3"
+                style="@style/column"
+                android:contentDescription="b3"/>
+
+        </LinearLayout>
+
+        <View style="@style/horizontalLine" />
+
+        <LinearLayout style="@style/row">
+
+            <Button
+                android:id="@+id/c1"
+                style="@style/column"
+                android:contentDescription="c1"/>
+
+            <View style="@style/verticalLine" />
+
+            <Button
+                android:id="@+id/c2"
+                style="@style/column"
+                android:contentDescription="c2"/>
+
+            <View style="@style/verticalLine" />
+
+            <Button
+                android:id="@+id/c3"
+                style="@style/column"
+                android:contentDescription="c3"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/TextLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal"
+        android:padding="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.095">
+
+        <LinearLayout style="@style/ButtonStyle">
+
+            <Button
+                android:id="@+id/pvp"
+                style="@style/GameButtonStyle"
+                android:text="PvP"
+                android:backgroundTint="@android:color/holo_red_dark"/>
+        </LinearLayout>
+
+        <LinearLayout style="@style/ButtonStyle">
+
+            <Button
+                android:id="@+id/pvc"
+                style="@style/GameButtonStyle"
+                android:text="PvC"
+                android:backgroundTint="@android:color/holo_red_dark"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/oldButton"
+        style="@style/GameButtonStyle"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="24dp"
+        android:text="Old Style"
+        android:backgroundTint="@android:color/holo_red_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/newButton"
+        style="@style/GameButtonStyle"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="24dp"
+        android:text="New Style"
+        android:backgroundTint="@android:color/holo_red_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

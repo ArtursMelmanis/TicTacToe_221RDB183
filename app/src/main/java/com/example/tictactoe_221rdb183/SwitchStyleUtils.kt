@@ -44,6 +44,7 @@ class SwitchStyleUtils {
         }
 
         // Funkcija tiek izmantota, lai iegūtu attēlus (Drawable) attiecīgi no spēles laukumā izmantotā simbola
+        // Funkcijā getStyleDrawable izveidota ar ChatGPT
         private fun getStyleDrawable(mainActivity: MainActivity, symbol: String): Drawable? {
             return when (symbol){
                 //Šeit pastāvīgi norādīta kāda kļūda, taču tā nekādā veidā neietekmē kodā darbībā

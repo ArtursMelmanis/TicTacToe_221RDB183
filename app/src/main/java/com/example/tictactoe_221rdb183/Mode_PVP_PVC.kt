@@ -1,3 +1,4 @@
+// Koda autors: Artūrs Melmanis, 6.grupa, 221RDB183, 2.kurss
 package com.example.tictactoe_221rdb183
 
 import kotlin.random.Random

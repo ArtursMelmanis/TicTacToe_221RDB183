@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+    <!-- Koda autors: Artūrs Melmanis, 6.grupa, 221RDB183, 2.kurss -->
     <!-- Dažadas stilas-->
 
     <style name="row">
@@ -50,7 +50,7 @@
         <item name="android:background">@drawable/new_cross</item>
     </style>
 
-    <!-- Šeit pastāvīgi norādīta kāda kļūda, taču tā nekādā veidā neietekmē koda darbību. -->
+    <!-- Šeit man pastāvīgi norādīta kāda kļūda ar failu new_nought.png, taču tā nekādā veidā neietekmē kodā darbībā -->
     <style name="NoughtStyle">
         <item name="android:background">@drawable/new_nought</item>
     </style>

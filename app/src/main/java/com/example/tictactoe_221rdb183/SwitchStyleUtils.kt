@@ -1,3 +1,4 @@
+// Koda autors: Artūrs Melmanis, 6.grupa, 221RDB183, 2.kurss
 package com.example.tictactoe_221rdb183
 
 import android.graphics.Color
@@ -47,7 +48,7 @@ class SwitchStyleUtils {
         // Funkcijā getStyleDrawable izveidota ar ChatGPT
         private fun getStyleDrawable(mainActivity: MainActivity, symbol: String): Drawable? {
             return when (symbol){
-                //Šeit pastāvīgi norādīta kāda kļūda, taču tā nekādā veidā neietekmē kodā darbībā
+                //Šeit man pastāvīgi norādīta kāda kļūda ar failu new_nought.png, taču tā nekādā veidā neietekmē kodā darbībā
                 MainActivity.NOUGHT -> ContextCompat.getDrawable(mainActivity, R.drawable.new_nought)
                 MainActivity.CROSS -> ContextCompat.getDrawable(mainActivity, R.drawable.new_cross)
                 else -> null
@@ -60,7 +61,7 @@ class SwitchStyleUtils {
             if(button.background != null)
                 return
             if(mainActivity.currentTurn == MainActivity.Turn.NOUGHT){
-                //Šeit pastāvīgi norādīta kāda kļūda, taču tā nekādā veidā neietekmē koda darbību
+                //Šeit man pastāvīgi norādīta kāda kļūda ar failu new_nought.png, taču tā nekādā veidā neietekmē kodā darbībā
                 button.background = ContextCompat.getDrawable(mainActivity, R.drawable.new_nought)
                 button.text = MainActivity.NOUGHT
                 // Diemžēl es nevarēju atbrīvoties no vecā simbola, tad funkcija checkForVictory pārstāja darboties

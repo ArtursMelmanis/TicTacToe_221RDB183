@@ -48,7 +48,9 @@ class SwitchStyleUtils {
         // Funkcijā getStyleDrawable izveidota ar ChatGPT
         private fun getStyleDrawable(mainActivity: MainActivity, symbol: String): Drawable? {
             return when (symbol){
-                //Šeit man pastāvīgi norādīta kāda kļūda ar failu new_nought.png, taču tā nekādā veidā neietekmē kodā darbībā
+                // Šeit man pastāvīgi norādīta kāda kļūda ar failu new_nought.png, taču tā nekādā veidā neietekmē kodā darbībā
+                // No mana prasa, lai es izmantotu failu ar nosaukumu New_Nought.png, bet tad būs kļūda un aplikācija netiks startēta
+                // Tomēr, neskatoties uz kļūdu, spēle sākas un izmanto jaunu simbolu
                 MainActivity.NOUGHT -> ContextCompat.getDrawable(mainActivity, R.drawable.new_nought)
                 MainActivity.CROSS -> ContextCompat.getDrawable(mainActivity, R.drawable.new_cross)
                 else -> null
@@ -61,7 +63,7 @@ class SwitchStyleUtils {
             if(button.background != null)
                 return
             if(mainActivity.currentTurn == MainActivity.Turn.NOUGHT){
-                //Šeit man pastāvīgi norādīta kāda kļūda ar failu new_nought.png, taču tā nekādā veidā neietekmē kodā darbībā
+                // Šeit man pastāvīgi norādīta kāda kļūda ar failu new_nought.png, taču tā nekādā veidā neietekmē kodā darbībā
                 button.background = ContextCompat.getDrawable(mainActivity, R.drawable.new_nought)
                 button.text = MainActivity.NOUGHT
                 // Diemžēl es nevarēju atbrīvoties no vecā simbola, tad funkcija checkForVictory pārstāja darboties

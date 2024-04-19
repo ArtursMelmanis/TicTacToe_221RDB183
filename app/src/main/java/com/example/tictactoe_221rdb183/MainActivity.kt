@@ -1,5 +1,6 @@
 package com.example.tictactoe_221rdb183
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -201,10 +202,12 @@ class MainActivity : AppCompatActivity() {
         if(currentTurn == Turn.NOUGHT){
             button.text = NOUGHT
             currentTurn = Turn.CROSS
+            button.setTextColor(Color.BLACK)
         }
         else if(currentTurn == Turn.CROSS){
             button.text = CROSS
             currentTurn = Turn.NOUGHT
+            button.setTextColor(Color.BLACK)
         }
         setTurnLabel()
     }

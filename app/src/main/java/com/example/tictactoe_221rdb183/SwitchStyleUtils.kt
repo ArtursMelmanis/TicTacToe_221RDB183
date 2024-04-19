@@ -5,8 +5,10 @@ import android.graphics.drawable.Drawable
 import android.widget.Button
 import androidx.core.content.ContextCompat
 
+// Stila izmaiņas
 class SwitchStyleUtils {
     companion object {
+        // Izmaiņa uz vecu stilu (krustiņi un nullīši)
         fun switchToOldStyle(mainActivity: MainActivity){
             if (mainActivity.switchstyle != MainActivity.SwitchStyle.Old){
                 mainActivity.switchstyle = MainActivity.SwitchStyle.Old
@@ -15,6 +17,7 @@ class SwitchStyleUtils {
             }
         }
 
+        // Izmaiņa uz jaunu stilu (krustiņi un nullīši)
         fun switchToNewStyle(mainActivity: MainActivity){
             if (mainActivity.switchstyle != MainActivity.SwitchStyle.New){
                 mainActivity.switchstyle = MainActivity.SwitchStyle.New
@@ -23,6 +26,7 @@ class SwitchStyleUtils {
             }
         }
 
+        // Funkcija tiek izmantota, lai mainītu spēles laukuma pogu izskatu, atkarībā no izvēlētā stila
         private fun switchStylefunc(mainActivity: MainActivity, style: MainActivity.SwitchStyle) {
             for(button in mainActivity.boardList){
                 button.text = ""
@@ -39,20 +43,27 @@ class SwitchStyleUtils {
             }
         }
 
+        // Funkcija tiek izmantota, lai iegūtu attēlus (Drawable) attiecīgi no spēles laukumā izmantotā simbola
         private fun getStyleDrawable(mainActivity: MainActivity, symbol: String): Drawable? {
             return when (symbol){
+                //Šeit pastāvīgi norādīta kāda kļūda, taču tā nekādā veidā neietekmē kodā darbībā
                 MainActivity.NOUGHT -> ContextCompat.getDrawable(mainActivity, R.drawable.new_nought)
                 MainActivity.CROSS -> ContextCompat.getDrawable(mainActivity, R.drawable.new_cross)
                 else -> null
             }
         }
 
+        //Pārbauda, vai pašreizējā šūna ir tukša, un, atkarībā no pašreizējā gājiena,
+        //tiek pievienots atbilstošs simbols jaunājā stilā un mainīts pašreizējais gājiens
         fun setNewSymbol(mainActivity: MainActivity, button: Button) {
             if(button.background != null)
                 return
             if(mainActivity.currentTurn == MainActivity.Turn.NOUGHT){
+                //Šeit pastāvīgi norādīta kāda kļūda, taču tā nekādā veidā neietekmē koda darbību
                 button.background = ContextCompat.getDrawable(mainActivity, R.drawable.new_nought)
                 button.text = MainActivity.NOUGHT
+                // Diemžēl es nevarēju atbrīvoties no vecā simbola, tad funkcija checkForVictory pārstāja darboties
+                // Tāpēc es izmantoju vecos simbolus kopā ar jaunajiem, bet vecos padaru neredzamus
                 button.setTextColor(Color.TRANSPARENT)
                 mainActivity.currentTurn = MainActivity.Turn.CROSS
             } else if(mainActivity.currentTurn == MainActivity.Turn.CROSS){

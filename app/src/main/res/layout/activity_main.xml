@@ -8,6 +8,7 @@
     android:background="@android:color/holo_orange_light"
     tools:context=".MainActivity">
 
+    <!-- Pielāgota sveiciena ziņa -->
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -21,6 +22,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Teksts, kas mainās atkarībā no pašreizējā gājiena -->
     <TextView
         android:id="@+id/turn"
         android:layout_width="wrap_content"
@@ -37,7 +39,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.879" />
 
-
+    <!-- Teksts, kas mainās atkarībā no pašreizējās spēles mode/rēžīma -->
     <TextView
         android:id="@+id/Mode"
         android:layout_width="wrap_content"
@@ -54,6 +56,8 @@
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:layout_constraintVertical_bias="0.0" />
 
+    <!-- Spēles laukums -->
+    <!-- Tika izveidots atsevišķs fails stila definēšanai (styles.xml) -->
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
@@ -141,6 +145,7 @@
 
     </LinearLayout>
 
+    <!-- Režīma maiņas pogas -->
     <LinearLayout
         android:id="@+id/TextLayout"
         android:layout_width="wrap_content"
@@ -177,7 +182,7 @@
 
     </LinearLayout>
 
-
+    <!-- Krustiņu un nullīšu stila maiņas poga -->
     <Button
         android:id="@+id/oldButton"
         style="@style/GameButtonStyle"
@@ -188,6 +193,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <!-- Krustiņu un nullīšu stila maiņas poga -->
     <Button
         android:id="@+id/newButton"
         style="@style/GameButtonStyle"

@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     // Es sākotnēji noteicu, ka pirmais gājiens ir krustiņu izvēlē
-    private var firstTurn = Turn.CROSS
+    var firstTurn = Turn.CROSS
 
     // Es sākotnēji noteicu, kura spēlētāja gājiens ir pašlaik
     var currentTurn = Turn.CROSS
@@ -145,7 +145,7 @@ class MainActivity : AppCompatActivity() {
                 result("Noughts win!")
         }
 
-        // // Pārbauda uzvaru "krustiņi" simbolu gadījumā un, ja runa ir par PvC režīmu, pārbauda uzvaru lietotāja gadījumā
+        // Pārbauda uzvaru "krustiņi" simbolu gadījumā un, ja runa ir par PvC režīmu, pārbauda uzvaru lietotāja gadījumā
         if(checkForVictory(CROSS)){
             crossesScore++
             crossesWon = true
@@ -158,6 +158,7 @@ class MainActivity : AppCompatActivity() {
         // Pārbauda spēles izlozi
         if(fullBoard()){
             result("Draw")
+            return
         }
 
         // Datora gājiens un lieku gājienu novēršana

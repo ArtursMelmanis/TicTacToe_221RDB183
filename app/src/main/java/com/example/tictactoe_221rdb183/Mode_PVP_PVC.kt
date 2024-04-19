@@ -23,7 +23,7 @@ class Mode_PVP_PVC(private val mainActivity: MainActivity) {
             mainActivity.resetBoard()
             setModeLabel()
             // Dators izmanto nullīšus
-            if (mainActivity.currentTurn == MainActivity.Turn.NOUGHT){
+            if (mainActivity.currentTurn == MainActivity.Turn.NOUGHT && mainActivity.firstTurn == MainActivity.Turn.NOUGHT){
                 computerMove()
             }
         }
